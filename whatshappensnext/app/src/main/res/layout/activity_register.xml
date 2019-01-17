@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/gradient">
+
+    <TextView
+        android:id="@+id/registerTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_alignParentTop="true"
+        android:text="@string/register"
+        android:textSize="32sp"
+        android:layout_marginTop="10dp"/>
+    <EditText
+        android:id="@+id/registerUserName"
+    android:layout_width="200dp"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/registerTextView"
+    android:layout_centerInParent="true"
+    android:layout_marginTop="20dp"
+    android:hint="@string/username"
+    android:background="#ffffff"
+        android:inputType="text"
+        android:importantForAutofill="no"
+        tools:targetApi="o" />
+
+    <EditText
+        android:id="@+id/registerEmail"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/registerUserName"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="20dp"
+        android:hint="@string/email"
+        android:background="#ffffff"
+        android:inputType="textEmailAddress"
+        android:importantForAutofill="no"
+        tools:targetApi="o" />
+
+    <EditText
+    android:id="@+id/registerPassword"
+    android:layout_width="200dp"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/registerEmail"
+    android:layout_centerInParent="true"
+    android:layout_marginTop="20dp"
+    android:hint="@string/password"
+    android:background="#ffffff"
+    android:inputType="textPassword"
+    android:importantForAutofill="no"
+    tools:targetApi="o" />
+
+    <EditText
+        android:id="@+id/registerConfirmPassword"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/registerPassword"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="20dp"
+        android:hint="@string/confirm_password"
+        android:background="#ffffff"
+        android:inputType="textPassword"
+        android:importantForAutofill="no"
+        tools:targetApi="o"/>
+
+    <Button
+        android:id="@+id/btnRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/registerConfirmPassword"
+        android:layout_marginTop="20dp"
+        android:layout_centerInParent="true"
+        android:text="@string/register"/>
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:background="#123456"
+        android:layout_centerInParent="true"
+        android:layout_alignParentBottom="true"
+        android:contentDescription="@string/todo" />
+
+    <ImageButton
+        android:id="@+id/homeIcon"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/homeicon"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp" />
+
+    <ImageButton
+        android:id="@+id/searchIcon"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/searchicon"
+        android:layout_toEndOf="@id/homeIcon"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@id/homeIcon" />
+
+    <ImageButton
+        android:id="@+id/aboutIcon"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/abouticon"
+        android:layout_toEndOf="@id/searchIcon"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@id/searchIcon" />
+
+    <ImageButton
+        android:id="@+id/leaderIcon"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/leadericon"
+        android:layout_toEndOf="@id/aboutIcon"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@id/aboutIcon" />
+
+    <ImageButton
+        android:id="@+id/userIcon"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/usericon"
+        android:layout_toEndOf="@id/leaderIcon"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginStart="20dp"
+        android:layout_toRightOf="@id/leaderIcon"
+        android:layout_marginLeft="20dp" />
+
+
+
+</RelativeLayout>
