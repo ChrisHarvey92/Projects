@@ -355,7 +355,7 @@ button {
     grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
   }
 }
-@-moz-keyframes zoomin {
+/*@-moz-keyframes zoomin {
   0% {
     max-width: 50%;
     transform: rotate(-30deg);
@@ -430,6 +430,16 @@ button {
     max-width: 100%;
     transform: rotate(0deg);
   }
+}*/
+
+ul li {
+  display: list-item;
+  list-style-type: disc;
+  margin-left: 10px;
+}
+
+.laurels-info {
+  font-size: 12px;
 }
 
 
