@@ -252,9 +252,11 @@ button {
   top:1px;
 }
 
-@media (max-width: 1400px) {
+@media (max-width: 1200px) {
   tr, td {
     padding: 1px;
+    display: block;
+    padding-bottom: 10px;
   }
   }
 
@@ -440,6 +442,28 @@ ul li {
 
 .laurels-info {
   font-size: 12px;
+}
+
+.previous-props-row {
+  height: auto;
+}
+
+@media (max-width: 1200px) {
+  .previous-props-row tr, td {
+    padding: 1px;
+    display: block;
+    padding-bottom: 50px !important;
+  }
+  }
+
+.previous-props-row2 {
+  height: auto;
+  padding-top: 0px !important;
+
+}
+
+.blankspace {
+  height: 50px;
 }
 
 
