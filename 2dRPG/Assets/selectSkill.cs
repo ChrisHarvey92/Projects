@@ -36,7 +36,7 @@ public class selectSkill : MonoBehaviour
 
         if(fbDropdown.value == 1)
         {
-            var fbIcon = Resources.Load<Sprite>("Tazo_2D/Icon/flameBombImg");
+            var fbIcon = Resources.Load<Sprite>("Tazo_2D/Icon/S_noble_hit");
             f1Btn.image.sprite = fbIcon;
             var F1 = ("flameBomb");
         } else
@@ -47,7 +47,7 @@ public class selectSkill : MonoBehaviour
 
         if (fbDropdown.value == 2)
         {
-            var fbIcon = Resources.Load<Sprite>("Tazo_2D/Icon/flameBombImg");
+            var fbIcon = Resources.Load<Sprite>("Tazo_2D/Icon/S_noble_hit");
             f2Btn.image.sprite = fbIcon;
             var F2 = ("flameBomb");
         }
@@ -59,7 +59,7 @@ public class selectSkill : MonoBehaviour
 
         if (fbDropdown.value == 3)
         {
-            var fbIcon = Resources.Load<Sprite>("Tazo_2D/Icon/flameBombImg");
+            var fbIcon = Resources.Load<Sprite>("Tazo_2D/Icon/S_noble_hit");
             f3Btn.image.sprite = fbIcon;
             var F3 = ("flameBomb");
         }
@@ -71,7 +71,7 @@ public class selectSkill : MonoBehaviour
 
         if (fbDropdown.value == 4)
         {
-            var fbIcon = Resources.Load<Sprite>("Tazo_2D/Icon/flameBombImg");
+            var fbIcon = Resources.Load<Sprite>("Tazo_2D/Icon/S_noble_hit");
             f4Btn.image.sprite = fbIcon;
             var F4 = ("flameBomb");
         }
@@ -83,7 +83,7 @@ public class selectSkill : MonoBehaviour
 
         if (fbDropdown.value == 5)
         {
-            var fbIcon = Resources.Load<Sprite>("Tazo_2D/Icon/flameBombImg");
+            var fbIcon = Resources.Load<Sprite>("Tazo_2D/Icon/S_noble_hit");
             f5Btn.image.sprite = fbIcon;
             var F5 = ("flameBomb");
         }
@@ -95,7 +95,7 @@ public class selectSkill : MonoBehaviour
 
         if (fbDropdown.value == 6)
         {
-            var fbIcon = Resources.Load<Sprite>("Tazo_2D/Icon/flameBombImg");
+            var fbIcon = Resources.Load<Sprite>("Tazo_2D/Icon/S_noble_hit");
             f6Btn.image.sprite = fbIcon;
             var F6 = ("flameBomb");
         } else
@@ -106,7 +106,7 @@ public class selectSkill : MonoBehaviour
 
         if (fbDropdown.value == 7)
         {
-            var fbIcon = Resources.Load<Sprite>("Tazo_2D/Icon/flameBombImg");
+            var fbIcon = Resources.Load<Sprite>("Tazo_2D/Icon/S_noble_hit");
             f7Btn.image.sprite = fbIcon;
             var F7 = ("flameBomb");
         } else
@@ -117,7 +117,7 @@ public class selectSkill : MonoBehaviour
 
         if (fbDropdown.value == 8)
         {
-            var fbIcon = Resources.Load<Sprite>("Tazo_2D/Icon/flameBombImg");
+            var fbIcon = Resources.Load<Sprite>("Tazo_2D/Icon/S_noble_hit");
             f8Btn.image.sprite = fbIcon;
             var F8 = ("flameBomb");
         } else
