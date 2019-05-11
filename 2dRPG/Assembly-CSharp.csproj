@@ -79,12 +79,14 @@
     <Compile Include="Assets\JMO Assets\Cartoon FX\Scripts\CFX_LightFlicker.cs" />
     <Compile Include="Assets\JMO Assets\Cartoon FX\Scripts\CFX_LightIntensityFade.cs" />
     <Compile Include="Assets\orcHealthDamage.cs" />
+    <Compile Include="Assets\playerDamage.cs" />
     <Compile Include="Assets\Scripts\basicMovement.cs" />
     <Compile Include="Assets\Scripts\health.cs" />
     <Compile Include="Assets\Scripts\hideSkillScroll.cs" />
     <Compile Include="Assets\Scripts\shooting.cs" />
     <Compile Include="Assets\selectSkill.cs" />
     <Compile Include="Assets\skillsPage.cs" />
+    <Compile Include="Assets\skillStats.cs" />
     <Compile Include="Assets\spell.cs" />
     <Compile Include="Assets\Tazo_fx\Script\BillBoard.cs" />
     <Compile Include="Assets\Tazo_fx\Script\button_target.cs" />

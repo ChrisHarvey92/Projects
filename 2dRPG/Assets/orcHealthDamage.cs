@@ -22,7 +22,10 @@ public class orcHealthDamage : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Debug.Log("Enemy hit! " + Health);
-        Health -= 50;
+        if (collision.gameObject.tag == "fireBall")
+        {
+            Health -= 50;
+        }
         if (Health <= 0)
         {
             followScript.enabled = false;

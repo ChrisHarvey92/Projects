@@ -3,14 +3,26 @@ ScriptsOnlyBuild:
     Assembly-CSharp.dll:
     - CFX_AutoDestructShuriken
     - basicMovement
+    - followPlayer
     - hideSkillScroll
+    - orcHealthDamage
+    - selectSkill
     - shooting
     - spell
+    UnityEditor.Graphs.dll:
+    - UnityEditor.Graphs.AnimationBlendTree.Graph
+    - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
+    - UnityEditor.Graphs.AnimationStateMachine.Graph
+    - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
+    - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.TestListCacheData
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.StandaloneInputModule
+    - UnityEngine.UI.Button
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.Dropdown
     - UnityEngine.UI.GraphicRaycaster
@@ -21,7 +33,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Text
     - UnityEngine.UI.Toggle
   sceneClasses:
-    Assets/2dGameProject.unity:
+    Assets/dungeonScene.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -57,39 +69,47 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 616}
+      Script: {instanceID: 622}
     - Class: 114
-      Script: {instanceID: 9256}
+      Script: {instanceID: 9262}
     - Class: 114
-      Script: {instanceID: 9346}
+      Script: {instanceID: 9264}
     - Class: 114
       Script: {instanceID: 9350}
     - Class: 114
       Script: {instanceID: 9352}
     - Class: 114
+      Script: {instanceID: 9356}
+    - Class: 114
       Script: {instanceID: 9358}
     - Class: 114
-      Script: {instanceID: 9366}
+      Script: {instanceID: 9364}
     - Class: 114
-      Script: {instanceID: 9374}
+      Script: {instanceID: 9372}
     - Class: 114
-      Script: {instanceID: 9392}
+      Script: {instanceID: 9380}
     - Class: 114
-      Script: {instanceID: 9394}
+      Script: {instanceID: 9398}
     - Class: 114
-      Script: {instanceID: 9402}
+      Script: {instanceID: 9400}
     - Class: 114
-      Script: {instanceID: 9404}
+      Script: {instanceID: 9408}
     - Class: 114
-      Script: {instanceID: 9406}
+      Script: {instanceID: 9410}
     - Class: 114
-      Script: {instanceID: 9678}
+      Script: {instanceID: 9412}
     - Class: 114
-      Script: {instanceID: 9926}
+      Script: {instanceID: 9686}
     - Class: 114
-      Script: {instanceID: 10378}
+      Script: {instanceID: 9938}
     - Class: 114
-      Script: {instanceID: 10600}
+      Script: {instanceID: 10298}
+    - Class: 114
+      Script: {instanceID: 10392}
+    - Class: 114
+      Script: {instanceID: 10580}
+    - Class: 114
+      Script: {instanceID: 10620}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -151,13 +171,13 @@ ScriptsOnlyBuild:
     className: TMP_Dropdown
   - hash:
       serializedVersion: 2
-      Hash: c902d91139427dc8888375408c4dec10
+      Hash: dec240b416e0f47686b72b40aff2d460
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: hideSkillScroll
   - hash:
       serializedVersion: 2
-      Hash: 7933021ff20028b656e08e2e04b84e67
+      Hash: 6e703aa34f6ff9aca0eaf00207f47cea
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: selectSkill
@@ -577,6 +597,12 @@ ScriptsOnlyBuild:
     className: SignalAsset
   - hash:
       serializedVersion: 2
+      Hash: 69f624e72955124bec1b708252393934
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: aiWander
+  - hash:
+      serializedVersion: 2
       Hash: f08a111e17bb701f9c9ec57bb78d9920
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -617,6 +643,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: BillBoard
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: idleBehaviour
   - hash:
       serializedVersion: 2
       Hash: 303ad70ce203ad874efe2965d0fbcff9
@@ -671,6 +703,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: SignalTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 6a2ae5cfe29ec8354d37e1e06788c0a6
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Patrol
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -817,16 +855,28 @@ ScriptsOnlyBuild:
     className: DataPrivacyButton
   - hash:
       serializedVersion: 2
+      Hash: 3261eb92ae2e16aad869dbdab6bbd84b
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: orcHealthDamage
+  - hash:
+      serializedVersion: 2
       Hash: f336e086360abe49a3323e5f1583c35a
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: AudioTrack
   - hash:
       serializedVersion: 2
-      Hash: 2f883aa29f7838b545ce0d14a02ad6e3
+      Hash: 0f2131fa23ffa925c65cb1ef9d01f65d
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: shooting
+  - hash:
+      serializedVersion: 2
+      Hash: bfb2d813c2ec46a1732b5916a4c1df7c
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: agroPlayer
   - hash:
       serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
@@ -847,6 +897,12 @@ ScriptsOnlyBuild:
     className: CFX_Demo_RandomDirectionTranslate
   - hash:
       serializedVersion: 2
+      Hash: 4364f9f6f29dc89bae0a0239cc7c6073
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: followPlayer
+  - hash:
+      serializedVersion: 2
       Hash: 5372ed2ce39229b1ac910757999a8be2
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -857,6 +913,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_ColorGradient
+  - hash:
+      serializedVersion: 2
+      Hash: afc5b93a7b192de2dcb3832fe35a5c7e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: followBehaviour
   - hash:
       serializedVersion: 2
       Hash: 8649814970b42d345b89944b862453cc
@@ -887,7 +949,13 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: skillStats
   platform: 19
   scenePathNames:
-  - Assets/2dGameProject.unity
+  - Assets/dungeonScene.unity
   playerPath: C:/Users/Chris/Desktop/2dRPG.exe

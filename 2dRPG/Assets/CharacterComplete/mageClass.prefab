@@ -1185,8 +1185,6 @@ MonoBehaviour:
   shootPointLeft: {fileID: 8424717616693361879}
   shootPointRight: {fileID: 8424717617535243856}
   playerFlip: {fileID: 8424717616085721648}
-  fireBallPrefab: {fileID: 2526820421560306678, guid: 6730b6b3bd9d9984ba2706565296969b,
-    type: 3}
   firePointLeft: {fileID: 8424717616693361880}
   firePointRight: {fileID: 8424717617535243857}
   spellDelay: 1
