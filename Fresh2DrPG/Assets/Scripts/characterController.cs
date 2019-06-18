@@ -16,6 +16,8 @@ public class characterController : MonoBehaviour
     private GameObject playerGO;
     private SpriteRenderer playerSR;
     private Animator wizAnim;
+    private Canvas uiCanvas;
+    private GameObject canvasGO;
 
     // Start is called before the first frame update
     void Awake()
@@ -24,6 +26,10 @@ public class characterController : MonoBehaviour
         playerSR = playerGO.GetComponent<SpriteRenderer>();
         playerSR.flipX = false;
         wizAnim = playerGO.GetComponent<Animator>();
+        canvasGO = GameObject.FindGameObjectWithTag("CanvasUI");
+        uiCanvas = canvasGO.GetComponent<Canvas>();
+        
+
     }
 
     // Update is called once per frame
@@ -60,9 +66,34 @@ public class characterController : MonoBehaviour
             wizAnim.Play("Wizard_Run");
         }
 
+        if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.S))
+        {
+            wizAnim.Play("Wizard_Run");
+        }
+
         if (Input.GetMouseButtonDown(0))
         {
-            wizAnim.Play("Wizard_Attack");
+            
+            if (uiCanvas.enabled == false)
+            {
+                wizAnim.Play("Wizard_Attack");
+            }
+            else
+            {
+                return;
+            }
+        }
+
+        if(Input.GetMouseButtonUp(0))
+        {
+            if(uiCanvas.enabled == false && movementSpeed == 0)
+            {
+                wizAnim.Play("Wizard_Idle");
+            } 
+            else
+            {
+                wizAnim.Play("Wizard_Run");
+            }
         }
 
         if (Input.anyKey == false)

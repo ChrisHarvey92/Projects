@@ -13,18 +13,11 @@ public class mageSkills : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        fireboltIcon = Resources.Load<Image>("Icons/firebolt");
-        firewallIcon = Resources.Load<Image>("Icons/firewall");
-        voidburstIcon = Resources.Load<Image>("Icons/voidburst");
-        electricpulseIcon = Resources.Load<Image>("Icons/electricpulse");
-        lightauraIcon = Resources.Load<Image>("Icons/lightaura");
-        speedauraIcon = Resources.Load<Image>("Icons/speedaura");
-        powerauraIcon = Resources.Load<Image>("Icons/poweraura");
-        darkauraIcon = Resources.Load<Image>("Icons/darkaura");
 
         skillBar = GetComponent<Image>();
         skillScroll = GameObject.FindGameObjectWithTag("skillScroll");
         scrollRenderer = skillScroll.GetComponent<Canvas>();
+        DontDestroyOnLoad(GameObject.FindGameObjectWithTag("Player"));
     }
 
     // Update is called once per frame
