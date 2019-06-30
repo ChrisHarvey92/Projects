@@ -1,0 +1,40 @@
+﻿@model IEnumerable<UserStoryOnlineA2.Models.Users>
+@{
+    ViewData["Title"] = "About";
+}
+<   <h2>Users list</h2>
+    <table class="table">
+        <tr>
+            <th>UserId</th>
+            <th>Firstname</th>
+            <th>Surname</th>
+            <th>Username</th>
+            <th>Email</th>
+            <th>Password</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+    <tr>
+        <td>
+            @Html.DisplayTextFor(modelItem => item.User_Id)
+        </td>
+        <td>
+            @Html.DisplayTextFor(modelItem => item.Firstname)
+        </td>
+        <td>
+            @Html.DisplayTextFor(modelItem => item.Surname)
+        </td>
+        <td>
+            @Html.DisplayTextFor(modelItem => item.Username)
+        </td>
+        <td>
+            @Html.DisplayTextFor(modelItem => item.Email)
+        </td>
+        <td>
+            @Html.DisplayTextFor(modelItem => item.Password)
+        </td>
+    </tr>
+        }
+
+
+    </table>
